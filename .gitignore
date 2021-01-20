@@ -1,0 +1,11 @@
+# Javascript
+*.map
+**.map
+
+!swagger/static*/*.js
+
+# Dependency directories
+node_modules
+typings
+typings/*
+.vscode
