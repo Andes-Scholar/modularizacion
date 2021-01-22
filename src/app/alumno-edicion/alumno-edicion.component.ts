@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 
-import { Alumno } from '../../models/alumno.model';
-import { ListItem } from '../../models/list-item.model';
-import { SexoListService, PerfilListService } from '../../services/list-item.service';
-import { AlumnosArrayService } from '../../services/alumnos-array.service';
+import { Alumno } from '../models/alumno.model';
+import { ListItem } from '../models/list-item.model';
+import { SexoListService, PerfilListService } from '../services/list-item.service';
+import { AlumnosArrayService } from '../services/alumnos-array.service';
 
 
 @Component({
