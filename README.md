@@ -12,7 +12,7 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 ## Práctica de Modularización 
 
-Realizar el refactor de la aplicación para crear el módulo alumnos.  La carga del módulo debeerá hacerse en lazy loading.
+Realizar el refactor de la aplicación para crear el módulo alumnos
 
 
 
