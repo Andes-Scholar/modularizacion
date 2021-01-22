@@ -52,7 +52,7 @@ export class AlumnosArrayService {
   }
 
   add(alumno: Alumno) {
-    const lastID = this.alumnos[this.alumnos.length -1].id;
+    const lastID = this.alumnos[this.alumnos.length - 1].id;
     alumno.id = lastID + 1;
     this.alumnos.push(alumno);
   }

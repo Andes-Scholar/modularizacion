@@ -4,7 +4,6 @@ import { RouterModule } from '@angular/router';
 import { AlumnoItemComponent } from './alumno-item/alumno-item.component';
 import { AlumnoListaComponent } from './alumno-lista/alumno-lista.component';
 import { AlumnoManagerComponent } from './alumno-manager/alumno-manager.component';
-import { FilterBoxComponent } from '../filter-box/filter-box.component';
 import { FormsModule } from '@angular/forms';
 import { AlumnoEdicionComponent } from './alumno-edicion/alumno-edicion.component';
 import {
@@ -23,15 +22,10 @@ import {
   MatMenuModule,
   MatDialogModule,
 } from '@angular/material';
+import {SharedModule} from '../shared/shared.module';
 
 @NgModule({
-  declarations: [
-    AlumnoEdicionComponent,
-    AlumnoManagerComponent,
-    AlumnoListaComponent,
-    AlumnoItemComponent,
-    FilterBoxComponent,
-  ],
+  declarations: [AlumnoEdicionComponent, AlumnoManagerComponent, AlumnoListaComponent, AlumnoItemComponent],
   imports: [
     CommonModule,
     FormsModule,
@@ -49,6 +43,7 @@ import {
     MatTableModule,
     MatMenuModule,
     MatDialogModule,
+    SharedModule,
     RouterModule.forChild([
       { path: ':operacion', component: AlumnoEdicionComponent },
       { path: ':operacion/:id', component: AlumnoEdicionComponent },

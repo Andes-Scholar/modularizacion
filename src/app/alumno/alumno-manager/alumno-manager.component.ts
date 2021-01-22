@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Alumno } from '../../models/alumno.model';
 import { AlumnosArrayService } from '../../services/alumnos-array.service';
 import { MatDialog } from '@angular/material';
-import { ConfirmDialogComponent } from '../../dialogs/confirm-dialog/confirm-dialog.component';
+import { ConfirmDialogComponent } from '../../shared/dialogs/confirm-dialog/confirm-dialog.component';
 import { Router } from '@angular/router';
 import { StateService } from '../../services/state-manager.service';
 

@@ -25,16 +25,10 @@ import {
 import { FormsModule } from '@angular/forms';
 import { CursoManagerComponent } from './curso-manager/curso-manager.component';
 import { AsistenciaManagerComponent } from './asistencia-manager/asistencia-manager.component';
-import { ConfirmDialogComponent } from './dialogs/confirm-dialog/confirm-dialog.component';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    MenuComponent,
-    CursoManagerComponent,
-    AsistenciaManagerComponent,
-    ConfirmDialogComponent,
-  ],
+  declarations: [AppComponent, MenuComponent, CursoManagerComponent, AsistenciaManagerComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
@@ -54,6 +48,7 @@ import { ConfirmDialogComponent } from './dialogs/confirm-dialog/confirm-dialog.
     MatTableModule,
     MatMenuModule,
     MatDialogModule,
+    SharedModule,
     RouterModule.forRoot([
       { path: 'alumnos', loadChildren: () => import('./alumno/alumno.module').then((m) => m.AlumnoModule) },
       { path: 'cursos', component: CursoManagerComponent },
@@ -62,7 +57,7 @@ import { ConfirmDialogComponent } from './dialogs/confirm-dialog/confirm-dialog.
       { path: '**', redirectTo: '/alumnos', pathMatch: 'full' },
     ]),
   ],
-  entryComponents: [ConfirmDialogComponent],
+  entryComponents: [],
   providers: [],
   bootstrap: [AppComponent],
 })
