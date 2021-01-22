@@ -6,21 +6,10 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MenuComponent } from './menu/menu.component';
 import { LayoutModule } from '@angular/cdk/layout';
-import {
-  MatToolbarModule,
-  MatButtonModule,
-  MatSidenavModule,
-  MatIconModule,
-  MatListModule,
-  MatFormFieldModule,
-  MatInputModule,
-  MatCardModule,
-  MatRadioModule,
-  MatSelectModule,
-  MatCheckboxModule,
-  MatTableModule,
-  MatMenuModule,
-  MatDialogModule,
+import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule,
+  MatListModule, MatFormFieldModule, MatInputModule, MatCardModule,
+  MatRadioModule, MatSelectModule, MatCheckboxModule, MatTableModule,
+  MatMenuModule, MatDialogModule,
 } from '@angular/material';
 import { FormsModule } from '@angular/forms';
 import { CursoManagerComponent } from './curso-manager/curso-manager.component';
@@ -33,7 +22,7 @@ import { ConfirmDialogComponent } from './dialogs/confirm-dialog/confirm-dialog.
     MenuComponent,
     CursoManagerComponent,
     AsistenciaManagerComponent,
-    ConfirmDialogComponent,
+    ConfirmDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -55,15 +44,16 @@ import { ConfirmDialogComponent } from './dialogs/confirm-dialog/confirm-dialog.
     MatMenuModule,
     MatDialogModule,
     RouterModule.forRoot([
-      { path: 'alumnos', loadChildren: () => import('./alumno/alumno.module').then((m) => m.AlumnoModule) },
-      { path: 'cursos', component: CursoManagerComponent },
-      { path: 'asistencias', component: AsistenciaManagerComponent },
-      { path: '', redirectTo: '/alumnos', pathMatch: 'full' },
-      { path: '**', redirectTo: '/alumnos', pathMatch: 'full' },
-    ]),
+      { path: 'cursos' , component: CursoManagerComponent},
+      { path: 'asistencias' , component: AsistenciaManagerComponent},
+      { path: '',  redirectTo: '/alumnos', pathMatch: 'full' },
+      { path: '**',  redirectTo: '/alumnos', pathMatch: 'full' },
+    ])
   ],
-  entryComponents: [ConfirmDialogComponent],
+  entryComponents: [
+    ConfirmDialogComponent
+  ],
   providers: [],
-  bootstrap: [AppComponent],
+  bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }
